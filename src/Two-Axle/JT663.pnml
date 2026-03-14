@@ -1,9 +1,18 @@
 spriteset (spriteset_JT663_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase_32bpp ("Two-Axle", "JT663_YX")
+    template_purchase_32bpp ("Two-Axle", "JT663")
 }
 
 spriteset (spriteset_JT663, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard_0 ("Two-Axle", "JT663_YX")
+    template_standard_0 ("Two-Axle", "JT663")
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_JT663_graphics, cargo_subtype) {
+    0: spriteset_JT663;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_JT663_articulated_part, extra_callback_info1) {
+    1..2 : return JT663;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
 
@@ -41,6 +50,7 @@ item (FEAT_ROADVEHS, JT663) {
         default:                        spriteset_JT663;
         purchase:                       spriteset_JT663_purchase;
         length:                         switch_1_7_1_length_9;
+        articulated_part:               switch_JT663_articulated_part;
 
         cost_factor:                    67;
         running_cost_factor:            143 * runningcostfactor();

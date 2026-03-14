@@ -1,28 +1,15 @@
-spriteset (spriteset_GTQ6105BEVBT20_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase_32bpp ("Two-Axle", "GTQ6105BEVBT20_GT")
-}
+// Begin GTQ6105BEVBT20
 
-spriteset (spriteset_GTQ6105BEVBT20_GT, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard_0 ("Two-Axle", "GTQ6105BEVBT20_GT")
+spriteset (spriteset_GTQ6105BEVBT20_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_purchase_32bpp ("Two-Axle", "GTQ6105BEVBT20_TJ")
 }
 
 spriteset (spriteset_GTQ6105BEVBT20_TJ, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard_0 ("Two-Axle", "GTQ6105BEVBT20_TJ")
 }
 
-switch (FEAT_ROADVEHS, SELF, switch_GTQ6105BEVBT20_cargo_subtype, cargo_subtype) {
-    0: return string(STR_1);
-    1: return string(STR_2);
-    return CB_RESULT_NO_TEXT;
-}
-
-switch (FEAT_ROADVEHS, SELF, switch_GTQ6105BEVBT20_cargo_graphics, cargo_subtype) {
-    0: spriteset_GTQ6105BEVBT20_GT;
-    1: spriteset_GTQ6105BEVBT20_TJ;
-}
-
 switch (FEAT_ROADVEHS, SELF, switch_GTQ6105BEVBT20_graphics, position_in_articulated_veh) {
-    1: switch_GTQ6105BEVBT20_cargo_graphics;
+    1: spriteset_GTQ6105BEVBT20_TJ;
     empty_sprites;
 }
 
@@ -65,8 +52,7 @@ item (FEAT_ROADVEHS, GTQ6105BEVBT20) {
     graphics {
         default:                        switch_GTQ6105BEVBT20_graphics;
         purchase:                       spriteset_GTQ6105BEVBT20_purchase;
-        cargo_subtype_text:             switch_GTQ6105BEVBT20_cargo_subtype;
-        length:                         switch_1_7_1_length_9;
+        length:                         switch_1_8_1_length_10;
         articulated_part:               switch_GTQ6105BEVBT20_articulated_part;
 
         cost_factor:                    67;
@@ -74,3 +60,5 @@ item (FEAT_ROADVEHS, GTQ6105BEVBT20) {
         purchase_running_cost_factor:   143 * 8;
     }
 }
+
+// End GTQ6105BEVBT20

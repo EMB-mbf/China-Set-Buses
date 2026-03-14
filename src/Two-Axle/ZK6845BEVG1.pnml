@@ -1,9 +1,11 @@
+// Begin ZK6845BEVG1
+
 spriteset (spriteset_ZK6845BEVG1_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase_32bpp ("Two-Axle", "ZK6845BEVG1_YT")
+    template_purchase_32bpp ("Two-Axle", "ZK6845BEVG1")
 }
 
-spriteset (spriteset_ZK6845BEVG1_YT, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard_0 ("Two-Axle", "ZK6845BEVG1_YT")
+spriteset (spriteset_ZK6845BEVG1_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_0 ("Two-Axle", "ZK6845BEVG1")
 }
 
 spriteset (spriteset_ZK6845BEVG1_TJBH, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
@@ -11,13 +13,13 @@ spriteset (spriteset_ZK6845BEVG1_TJBH, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
 }
 
 switch (FEAT_ROADVEHS, SELF, switch_ZK6845BEVG1_cargo_subtype, cargo_subtype) {
-    0: return string(STR_1);
-    1: return string(STR_2);
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_TJBH);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_ROADVEHS, SELF, switch_ZK6845BEVG1_graphics, cargo_subtype) {
-    0: spriteset_ZK6845BEVG1_YT;
+    0: spriteset_ZK6845BEVG1_original;
     1: spriteset_ZK6845BEVG1_TJBH;
 }
 
@@ -61,3 +63,5 @@ item (FEAT_ROADVEHS, ZK6845BEVG1) {
         purchase_running_cost_factor:   143 * 8;
     }
 }
+
+// End ZK6845BEVG1

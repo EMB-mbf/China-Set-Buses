@@ -35,3 +35,14 @@ STR_RELDEC                  :可靠性下降速度：{COMMA}
 STR_COMFORT                 :舒适度：{COMMA}
 STR_LOADING                 :装载速度：{COMMA}
 STR_LIVERY_AVAILABLE        :{BLACK}可供选择的涂装：
+
+STR_ORIGINAL                :{BLACK}原版涂装
+STR_VIP                     :{GOLD}“VIP”{BLACK}涂装
+STR_YG_ORIGINAL             :{BLACK}“阳光”造型{GREEN}原版{BLACK}涂装
+STR_YG_TJ                   :{BLACK}“阳光”造型{RED}天{GRAY}津公交集{RED}团{BLACK}涂装
+STR_FC_ORIGINAL             :{BLACK}“风采”造型{GREEN}原版{BLACK}涂装
+STR_DT                      :{BLUE}大同公交{LTBLUE}集团{BLACK}涂装
+STR_CJ                      :{CREAM}昌吉公交集团{BLACK}涂装
+STR_HB                      :{YELLOW}哈尔滨公交集团{BLACK}涂装
+STR_SY_SUBWAY               :{WHITE}沈阳地铁{BLUE}公交{DKGREEN}集{GOLD}团{BLACK}涂装
+STR_TJBH                    :{YELLOW}天津滨海{BLUE}公交{DKGREEN}集团{BLACK}涂装

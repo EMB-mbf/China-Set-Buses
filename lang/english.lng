@@ -48,3 +48,14 @@ STR_RELDEC                  :Reliability Decay Speed: {COMMA}
 STR_COMFORT                 :Comfort: {COMMA}
 STR_LOADING                 :Loading Speed: {COMMA}
 STR_LIVERY_AVAILABLE        :{BLACK}Livery Availability:
+
+STR_ORIGINAL                :{BLACK}Original Livery
+STR_VIP                     :{GOLD}"VIP" {BLACK}Livery
+STR_YG_ORIGINAL             :{GREEN}Original Livery {BLACK}of "Sunshine" Design
+STR_YG_TJ                   :{RED}Tianjin {GRAY}Public Transport {RED}Group {BLACK}of "Sunshine" Design
+STR_FC_ORIGINAL             :{GREEN}Original Livery {BLACK}of "Elegance" Design
+STR_DT                      :{BLUE}Datong Public Transport {LTBLUE}Group {BLACK}Livery
+STR_CJ                      :{CREAM}Changji Public Transport Group {BLACK}Livery
+STR_HB                      :{YELLOW}Harbin Public Transport Group {BLACK}Livery
+STR_SY_SUBWAY               :{WHITE}Shenyang Metro & {BLUE}Public {DKGREEN}Transport {GOLD}Group {BLACK}Livery
+STR_TJBH                    :{YELLOW}Tianjin Binhai Public {BLUE}Transport {DKGREEN}Group {BLACK}Livery

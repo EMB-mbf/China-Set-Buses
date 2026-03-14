@@ -1,24 +1,44 @@
+// Begin ZK6125CHEVNPG29
+
 spriteset (spriteset_ZK6125CHEVNPG29_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase_32bpp ("Two-Axle", "ZK6125CHEVNPG29_1_DT")
+    template_purchase_32bpp ("Two-Axle", "ZK6125CHEVNPG29")
 }
 
-spriteset (spriteset_ZK6125CHEVNPG29_1_DT, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard_2 ("Two-Axle", "ZK6125CHEVNPG29_1_DT")
+spriteset (spriteset_ZK6125CHEVNPG29_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_2 ("Two-Axle", "ZK6125CHEVNPG29")
 }
 
-spriteset (spriteset_ZK6125CHEVNPG29_YT_1, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard_2 ("Two-Axle", "ZK6125CHEVNPG29_YT_1")
+spriteset (spriteset_ZK6125CHEVNPG29_DT, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_2 ("Two-Axle", "ZK6125CHEVNPG29_DT")
+}
+
+spriteset (spriteset_ZK6125CHEVNPG29_CJ, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_2 ("Two-Axle", "ZK6125CHEVNPG29_CJ")
+}
+
+spriteset (spriteset_ZK6125CHEVNPG29_HB, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_2 ("Two-Axle", "ZK6125CHEVNPG29_HB")
+}
+
+spriteset (spriteset_ZK6125CHEVNPG29_SY, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_2 ("Two-Axle", "ZK6125CHEVNPG29_SY")
 }
 
 switch (FEAT_ROADVEHS, SELF, switch_ZK6125CHEVNPG29_cargo_subtype, cargo_subtype) {
-    0: return string(STR_1);
-    1: return string(STR_2);
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_DT);
+    2: return string(STR_CJ);
+    3: return string(STR_HB);
+    4: return string(STR_SY_SUBWAY);
     return CB_RESULT_NO_TEXT;
 }
 
 switch (FEAT_ROADVEHS, SELF, switch_ZK6125CHEVNPG29_cargo_graphics, cargo_subtype) {
-    0: spriteset_ZK6125CHEVNPG29_1_DT;
-    1: spriteset_ZK6125CHEVNPG29_YT_1;
+    0: spriteset_ZK6125CHEVNPG29_original;
+    1: spriteset_ZK6125CHEVNPG29_DT;
+    2: spriteset_ZK6125CHEVNPG29_CJ;
+    3: spriteset_ZK6125CHEVNPG29_HB;
+    4: spriteset_ZK6125CHEVNPG29_SY;
 }
 
 switch (FEAT_ROADVEHS, SELF, switch_ZK6125CHEVNPG29_graphics, position_in_articulated_veh) {
@@ -73,3 +93,5 @@ item (FEAT_ROADVEHS, ZK6125CHEVNPG29) {
         purchase_running_cost_factor:   143 * 8;
     }
 }
+
+// End ZK6125CHEVNPG29

@@ -2,7 +2,7 @@ spriteset (spriteset_BK640_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase_32bpp ("Two-Axle", "BK640oil_BJ")
 }
 
-spriteset (spriteset_BK640, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+spriteset (spriteset_BK640_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_standard_0 ("Two-Axle", "BK640oil_BJ")
 }
 
@@ -38,7 +38,7 @@ item (FEAT_ROADVEHS, BK640) {
         cargo_age_period:               169 << param_cargo_decay;
     }
     graphics {
-        default:                        spriteset_BK640;
+        default:                        spriteset_BK640_original;
         purchase:                       spriteset_BK640_purchase;
 
         cost_factor:                    67;

@@ -1,14 +1,26 @@
+// Begin JNP6127EA
+
 spriteset (spriteset_JNP6127EA_purchase, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase_32bpp ("Two-Axle", "JNP6127EA_QN")
+    template_purchase_32bpp ("Two-Axle", "JNP6127EA")
 }
 
-spriteset (spriteset_JNP6127EA_QN, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard_2 ("Two-Axle", "JNP6127EA_QN")
+spriteset (spriteset_JNP6127EA_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_2 ("Two-Axle", "JNP6127EA")
 }
 
-switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_graphics, position_in_articulated_veh) {
-    1: spriteset_JNP6127EA_QN;
-    empty_sprites;
+spriteset (spriteset_JNP6127EA_VIP, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+    template_standard_2 ("Two-Axle", "JNP6127EA_VIP")
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_cargo_subtype, cargo_subtype) {
+    0: return string(STR_ORIGINAL);
+    1: return string(STR_VIP);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_graphics, cargo_subtype) {
+    0: spriteset_JNP6127EA_original;
+    1: spriteset_JNP6127EA_VIP;
 }
 
 switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_articulated_part, extra_callback_info1) {
@@ -49,6 +61,7 @@ item (FEAT_ROADVEHS, JNP6127EA) {
     graphics {
         default:                        switch_JNP6127EA_graphics;
         purchase:                       spriteset_JNP6127EA_purchase;
+        cargo_subtype_text:             switch_JNP6127EA_cargo_subtype;
         length:                         switch_2_7_2_length_11;
         articulated_part:               switch_JNP6127EA_articulated_part;
 
@@ -57,3 +70,5 @@ item (FEAT_ROADVEHS, JNP6127EA) {
         purchase_running_cost_factor:   143 * 8;
     }
 }
+
+// End JNP6127EA 
