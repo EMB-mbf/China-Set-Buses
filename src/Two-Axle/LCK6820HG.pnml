@@ -47,7 +47,7 @@ item (FEAT_ROADVEHS, LCK6820HG) {
         name:                           string(STR_NAME_LCK6820HG);
         introduction_date:              date(2013,02,18);
         model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   20;
+        vehicle_life:                   13;
         reliability_decay:              15;
 
         power:                          132 kW;
@@ -57,16 +57,17 @@ item (FEAT_ROADVEHS, LCK6820HG) {
 
         cargo_capacity:                 58;
         loading_speed:                  9 << param_loading_speed;
-        cargo_age_period:               169 << param_cargo_decay;
+        cargo_age_period:               112 << param_cargo_decay;
     }
     graphics {
         default:                        switch_LCK6820HG_graphics;
         purchase:                       spriteset_LCK6820HG_purchase;
         cargo_subtype_text:             switch_LCK6820HG_cargo_subtype;
+        additional_text:                string(STR_DESC_4, string(STR_TYPE_URBAN), string(STR_SIZE_MEDIUM), string(STR_CLASS_ORIDINARY), string(STR_COMFORT, 112));
 
-        cost_factor:                    67;
-        running_cost_factor:            143 * runningcostfactor();
-        purchase_running_cost_factor:   143 * 8;
+        cost_factor:                    152;
+        running_cost_factor:            2 * runningcostfactor();
+        purchase_running_cost_factor:   2 * 8;
     }
 }
 

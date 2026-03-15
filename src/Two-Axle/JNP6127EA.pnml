@@ -18,9 +18,14 @@ switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_cargo_subtype, cargo_subtype) {
     return CB_RESULT_NO_TEXT;
 }
 
-switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_graphics, cargo_subtype) {
+switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_cargo_graphics, cargo_subtype) {
     0: spriteset_JNP6127EA_original;
     1: spriteset_JNP6127EA_VIP;
+}
+
+switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_graphics, position_in_articulated_veh) {
+    1: switch_JNP6127EA_cargo_graphics;
+    empty_sprites;
 }
 
 switch (FEAT_ROADVEHS, SELF, switch_JNP6127EA_articulated_part, extra_callback_info1) {
@@ -46,17 +51,17 @@ item (FEAT_ROADVEHS, JNP6127EA) {
         name:                           string(STR_NAME_JNP6127EA);
         introduction_date:              date(2010,1,1);
         model_life:                     VEHICLE_NEVER_EXPIRES;
-        vehicle_life:                   20;
+        vehicle_life:                   15;
         reliability_decay:              15;
 
-        power:                          200 kW;
+        power:                          228 kW;
         weight:                         13.1 ton;
         tractive_effort_coefficient:    0.3;
-        speed:                          70 km/h;
+        speed:                          160 km/h;
 
         cargo_capacity:                 18;
         loading_speed:                  9 << param_loading_speed;
-        cargo_age_period:               169 << param_cargo_decay;
+        cargo_age_period:               224 << param_cargo_decay;
     }
     graphics {
         default:                        switch_JNP6127EA_graphics;
@@ -64,10 +69,11 @@ item (FEAT_ROADVEHS, JNP6127EA) {
         cargo_subtype_text:             switch_JNP6127EA_cargo_subtype;
         length:                         switch_2_7_2_length_11;
         articulated_part:               switch_JNP6127EA_articulated_part;
+        additional_text:                string(STR_DESC_4, string(STR_TYPE_URBAN), string(STR_SIZE_LARGE), string(STR_CLASS_HIGH_1), string(STR_COMFORT, 224));
 
-        cost_factor:                    67;
-        running_cost_factor:            143 * runningcostfactor();
-        purchase_running_cost_factor:   143 * 8;
+        cost_factor:                    231;
+        running_cost_factor:            3 * runningcostfactor();
+        purchase_running_cost_factor:   3 * 8;
     }
 }
 

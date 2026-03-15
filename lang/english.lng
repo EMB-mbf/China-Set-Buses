@@ -45,9 +45,22 @@ STR_2                       :2
 
 STR_X                       :To Be Determined
 STR_RELDEC                  :Reliability Decay Speed: {COMMA}
-STR_COMFORT                 :Comfort: {COMMA}
 STR_LOADING                 :Loading Speed: {COMMA}
 STR_LIVERY_AVAILABLE        :{BLACK}Livery Availability:
+STR_TYPE_URBAN              :{BLACK}Type: {LTBLUE}Urban Bus
+STR_TYPE_REGIONAL           :{BLACK}Type: {YELLOW}Regional/Suburban Bus
+STR_TYPE_LONG_DISTANCE      :{BLACK}Type: {WHITE}Long Distance Bus
+STR_TYPE_TOURIST            :{BLACK}Type: {WHITE}Tourist Bus
+STR_SIZE_MINI               :{BLACK}Size: {YELLOW}Mini
+STR_SIZE_MEDIUM             :{BLACK}Size: {GREEN}Medium
+STR_SIZE_LARGE              :{BLACK}Size: {LTBLUE}Large
+STR_SIZE_EXTRA_LARGE        :{BLACK}Size: {WHITE}Extra-large
+STR_CLASS_ORIDINARY         :{BLACK}Class: {RED}Oridinary
+STR_CLASS_MEDIUM            :{BLACK}Class: {YELLOW}Medium
+STR_CLASS_HIGH_1            :{BLACK}Class: {GREEN}High I
+STR_CLASS_HIGH_2            :{BLACK}Class: {LTBLUE}High II
+STR_CLASS_HIGH_3            :{BLACK}Class: {WHITE}High III
+STR_COMFORT                 :{BLACK}Comfort: {GOLD}{COMMA}
 
 STR_ORIGINAL                :{BLACK}Original Livery
 STR_VIP                     :{GOLD}"VIP" {BLACK}Livery

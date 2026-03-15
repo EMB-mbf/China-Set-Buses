@@ -35,14 +35,15 @@ item (FEAT_ROADVEHS, BK640) {
 
         cargo_capacity:                 80;
         loading_speed:                  9 << param_loading_speed;
-        cargo_age_period:               169 << param_cargo_decay;
+        cargo_age_period:               118 << param_cargo_decay;
     }
     graphics {
         default:                        spriteset_BK640_original;
         purchase:                       spriteset_BK640_purchase;
+        additional_text:                string(STR_DESC_4, string(STR_TYPE_URBAN), string(STR_SIZE_MEDIUM), string(STR_CLASS_ORIDINARY), string(STR_COMFORT, 118));
 
-        cost_factor:                    67;
-        running_cost_factor:            143 * runningcostfactor();
-        purchase_running_cost_factor:   143 * 8;
+        cost_factor:                    59;
+        running_cost_factor:            1 * runningcostfactor();
+        purchase_running_cost_factor:   1 * 8;
     }
 }
